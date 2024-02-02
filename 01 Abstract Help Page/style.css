@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --clr-blue: #4C5FD5;
+    --clr-grey: #dadbf1;
+
+    --ff-poppins: 'Poppins', sans-serif;
+
+    --fs-200: clamp(0.6944rem, 0.6507rem + 0.1866vi, 0.8rem);
+    --fs-300: clamp(0.8333rem, 0.8057rem + 0.1179vi, 0.9rem);
+    --fs-400: clamp(1rem, 0.9482rem + 0.221vi, 1.125rem);
+    --fs-500: clamp(1.2rem, 1.1145rem + 0.3646vi, 1.4063rem);
+    --fs-600: clamp(1.44rem, 1.3083rem + 0.5619vi, 1.7578rem);
+    --fs-700: clamp(1.728rem, 1.5336rem + 0.8296vi, 2.1973rem);
+    --fs-800: clamp(2.0736rem, 1.7334rem + 1.7011vi, 3.0518rem);
+    --fs-900: clamp(2.4883rem, 1.9133rem + 2.4534vi, 3.8147rem);
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 600;
+
+}
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: var(--fs-400);
+  font-family: var(--ff-poppins);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    width: Min(1200px, 100% - 4em);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 2em; */
+}
+
+.col {
+    width: 45%; 
+    margin: 0 2rem 4em 0;
+    /* this is a comment */
+}
+
+.flow > * {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-weight: var(--fw-bold);
+}
+
+
+/* css here */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 4em;
+    background-color: black;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    color: #e9e9e9;
+    font-weight: var(--fw-bold);
+}
+
+.nav-item a {
+    color: var(--clr-grey);
+}
+
+.nav-item {
+    color: var(--clr-grey);
+}
+
+.nav-button {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-grey);
+}
+
+.nav-button-01 {
+    border: 1px solid var(--clr-grey);
+    background-color: #161b1c;
+}
+
+.nav-button-02 {
+    background-color: var(--clr-blue);
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.nav-button:hover {
+    opacity: 0.75;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 10em;
+    background-color: var(--clr-grey);
+    width: 100%;
+}
+
+.text-box-content {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-800);
+    margin-bottom: 2rem;
+}
+
+.input {
+    width: 60%;
+    padding: 0.6em;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.input::placeholder {
+    font-size: var(--fs-300);
+    opacity: 0.75;
+}
+
+.main {
+    margin-block-start: 7em;
+}
+
+.image .img {
+    width: 100px;
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: #e9e9e9;
+    padding-block: 2em;
+}
+
+.footer-list a {
+    color: #e9e9e9;
+    font-size: 0.8rem;
+}
+
+.sub-footer-list {
+    color: white;
+    padding: 0;
+}
+
+.sub-footer-list p {
+    font-size: 0.8rem;
+    font-weight: var(--fw-bold);
+    margin-top: 2rem;
+}
+
+.footer-copyright {
+    align-self: flex-end;
+    font-size: 0.9rem;
+}
+
+@media (width < 50em) {
+    h1 {
+        font-size: Min(var(--fs-700), var(--fs-800));
+        /* width: 80%; */
+    }
+
+    .text-box {
+        padding: 2em;
+    }
+
+    .text-box-content {
+        width: 80%;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .image {
+        margin-bottom: 1.5rem;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .nav-list-secondary {
+        display: none;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .footer {
+        display: block;
+    }
+    
+}
+
+@media (width < 38em) {
+    .text-box {
+        width: 100%;
+    }
+}
